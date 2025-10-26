@@ -1,0 +1,18 @@
+type Query{
+    getAll:[Product]
+    getAllProductsByCategoty(category:String!):[Product]
+}
+
+type Mutation{
+    saveProduct(name:String!,category:String!,price:Float!,stock:Int!):Product
+    updateProductStock(id:ID! ,stock:Int):Product
+    deleteProduct(id:ID!):String
+}
+
+type Product{
+      id:ID
+      name:String
+      category:String
+      price:Float
+      stock:Int
+}
